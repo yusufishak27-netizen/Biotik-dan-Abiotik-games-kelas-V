@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>ECO ADVENTURE - Misi Menjaga Keseimbangan Ekosistem</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+
+  <!-- MathJax Configuration -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <!-- MathJax Script (Loaded Async) -->
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+  <!-- Container for the entire game app -->
+  <div id="app"></div>
+
+  <!-- Game Scripts (Loaded in dependency order) -->
+  <script src="src/config.js"></script>
+  <script src="src/data/characters.js"></script>
+  <script src="src/data/maps.js"></script>
+  <script src="src/data/questions.js"></script>
+  <script src="src/storage/storage.js"></script>
+  <script src="src/audio/audioManager.js"></script>
+  <script src="src/game/scoring.js"></script>
+  <script src="src/reports/exportManager.js"></script>
+  <script src="src/app.js"></script>
+
+  <!-- Entry Point Script -->
+  <script>
+    // Initialize the game when the DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      initApp();
+    });
+  </script>
+</body>
+</html>
